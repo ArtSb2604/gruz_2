@@ -16,6 +16,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: all 1s;
+}
+
+header:hover {
+    background: #FFF;
 }
 
 .header-logo {
@@ -28,19 +37,22 @@ header {
     font-weight: Montserrat;
     font-size: 2.4rem;
     font-weight: 500;
-    color: #000;
+    color: #fff;
 }
 
 .header-logo h1 {
     font-weight: Montserrat;
     font-size: 1.6rem;
     font-weight: 400;
+    color: #fff;
+}
+
+header:hover .header-logo a, header:hover .header-logo h1 {
     color: #000;
 }
 
 .header-menu {
     width: 28rem;
-    background: #141414;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,8 +64,22 @@ header {
     padding-bottom: 1rem;
 }
 
-.header-menu:hover {
-    z-index: 999;
+.header-menu__title {
+    background: #141414;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-menu__block {
+    transform: translateY(-200%);
+    transition: .5s all;
+    background: #141414;
+    width: 100%;
+    z-index: 0;
+}
+
+.header-menu:hover .header-menu__block {
+    transform: translateY(0%);
 }
 
 .header-menu__block {
@@ -129,6 +155,7 @@ header {
     display: flex;
     gap: 1.6rem;
     margin-top: 2.2rem;
+    padding: 0 0.1rem;
 }
 
 .provide__elem {
@@ -556,3 +583,27 @@ header {
 .odometer.odometer-auto-theme, .odometer.odometer-theme-car {
     background: none !important;
 }
+
+.odometer-formatting-mark {
+    display: none !important;
+}
+
+.odometer-inside .odometer-digit:nth-child(3) {
+    width: 45rem;
+}
+
+#odometer {
+    margin-left: -20rem;
+}
+
+.products__elem:hover path {
+    stroke-dasharray: 400; /* длина контура */
+    stroke-dashoffset: 400; /* начальное смещение (длина контура) */
+    animation: draw 3s linear forwards; /* анимация */
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0; /* завершающее смещение */
+    }
+  }
