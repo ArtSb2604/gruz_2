@@ -597,8 +597,8 @@ header:hover .header-logo a, header:hover .header-logo h1 {
 }
 
 .products__elem:hover path {
-    stroke-dasharray: 400; /* длина контура */
-    stroke-dashoffset: 400; /* начальное смещение (длина контура) */
+    stroke-dasharray: 300; /* длина контура */
+    stroke-dashoffset: 300; /* начальное смещение (длина контура) */
     animation: draw 3s linear forwards; /* анимация */
   }
   
