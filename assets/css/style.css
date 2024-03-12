@@ -65,9 +65,14 @@ header:hover .header-logo a, header:hover .header-logo h1 {
 }
 
 .header-menu__title {
-    background: #141414;
+    background: none;
     width: 100%;
     z-index: 1;
+    transition: all 1s;
+}
+
+header:hover .header-menu__title {
+    background: #141414;
 }
 
 .header-menu__block {
